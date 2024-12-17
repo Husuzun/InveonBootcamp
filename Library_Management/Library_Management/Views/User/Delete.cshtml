@@ -1,0 +1,16 @@
+@using Microsoft.AspNetCore.Identity
+@model IdentityUser
+
+<h2>Kullanıcı Sil</h2>
+
+<p>Bu kullanıcıyı silmek istediğinizden emin misiniz?</p>
+
+<div>
+    <h3>@Model.UserName</h3>
+    <p>@Model.Email</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <button type="submit">Sil</button>
+    <a asp-action="Index">İptal</a>
+</form> 
